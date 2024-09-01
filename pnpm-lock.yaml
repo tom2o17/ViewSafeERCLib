@@ -1,0 +1,34 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@openzeppelin/contracts':
+    specifier: 5.0.2
+    version: 5.0.2
+  ds-test:
+    specifier: github:dapphub/ds-test
+    version: github.com/dapphub/ds-test/e282159d5170298eb2455a6c05280ab5a73a4ef0
+  forge-std:
+    specifier: github:foundry-rs/forge-std#e8a047e3f40f13fa37af6fe14e6e06283d9a060e
+    version: github.com/foundry-rs/forge-std/e8a047e3f40f13fa37af6fe14e6e06283d9a060e
+
+packages:
+
+  /@openzeppelin/contracts@5.0.2:
+    resolution: {integrity: sha512-ytPc6eLGcHHnapAZ9S+5qsdomhjo6QBHTDRRBFfTxXIpsicMhVPouPgmUPebZZZGX7vt9USA+Z+0M0dSVtSUEA==}
+    dev: false
+
+  github.com/dapphub/ds-test/e282159d5170298eb2455a6c05280ab5a73a4ef0:
+    resolution: {tarball: https://codeload.github.com/dapphub/ds-test/tar.gz/e282159d5170298eb2455a6c05280ab5a73a4ef0}
+    name: ds-test
+    version: 1.0.0
+    dev: false
+
+  github.com/foundry-rs/forge-std/e8a047e3f40f13fa37af6fe14e6e06283d9a060e:
+    resolution: {tarball: https://codeload.github.com/foundry-rs/forge-std/tar.gz/e8a047e3f40f13fa37af6fe14e6e06283d9a060e}
+    name: forge-std
+    version: 1.5.6
+    dev: false

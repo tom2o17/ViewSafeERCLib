@@ -1,0 +1,17 @@
+{
+  "name": "ViewSafeLib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "forge-std": "github:foundry-rs/forge-std#e8a047e3f40f13fa37af6fe14e6e06283d9a060e",
+    "ds-test": "github:dapphub/ds-test",
+    "@openzeppelin/contracts": "5.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
