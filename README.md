@@ -1,66 +1,28 @@
-## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+# Motivation 
 
-Foundry consists of:
+Injectable contracts are important in order to efficiently query complex statistics on chain. However current ERC interfaces are not optimized for this practice. In addition ethereums "bubble up" reversions do not lend themselves well for enviroments in which the target contract may return a non-standardized information as well as instances in which target contracts do not exist at a given block. 
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
+This library aims to solve this and make inejcted evm contracts utilizing this library more robust and revert less often. 
 
 ## Usage
+```solidity
+contract ToInject {
+    using ViewSafeERC for IERC20;
+    using ViewSafeERC for IERC20Metadata;
+
+    // Use IERC20 and IERC20 metadata as normal w/ view safe 
+    // `safe...(args)` function variants for cases in which 
+    // it is non-desirable to have the parent function revert
+}
+```
 
 ### Build
-
 ```shell
 $ forge build
 ```
 
 ### Test
-
 ```shell
 $ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
 ```
