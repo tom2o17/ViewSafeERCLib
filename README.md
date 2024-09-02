@@ -1,7 +1,7 @@
 
 # 🤔 Motivation 🤔
 
-Injectable contracts are important in order to efficiently query complex statistics on chain. However current ERC interfaces are not optimized for this practice. In addition the EVMs "bubble up" reversions des not lend itself well for enviroments in which the target contract: returns non-standardized information, does not exist at a given block, does not expose a standard function selector, or any instance in which the outermost function ought not revert if a sub-view function does.
+Injectable contracts are important in order to efficiently query complex statistics on chain. However current ERC interfaces are not optimized for this practice. In addition the EVMs "bubble up" reversions does not lend itself well for enviroments in which the target contract: returns non-standardized information, does not exist at a given block, does not expose a standard function selector, or any instance in which the outermost function ought not revert if a sub-view function does.
 
 This library aims to solve this and make inejcted evm contracts utilizing this library more robust and have outermost view function calls revert less often. 
 
